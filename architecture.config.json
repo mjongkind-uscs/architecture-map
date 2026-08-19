@@ -1,0 +1,26 @@
+{
+  "coverage": "src/coverage.json",
+  "output": "src/measured.generated.ts",
+  "sources": [
+    "../phenix.ui/apps/*/src/**/*.{ts,tsx,css}",
+    "../phenix.ui/apps/*/*.{ts,js,cjs}",
+    "../phenix.ui/packages/*/src/**/*.{ts,tsx,css,js}",
+    "../phenix.ui/packages/*/*.{ts,js,cjs,css}",
+    "../phenix.ui/packages/eslint-config/*.js",
+    "../phenix.ui/scripts/**/*.{ts,mjs}",
+    "../phenix.ui/generators/**/*.ts",
+    "../phenix.ui/e2e/**/*.ts",
+    "../phenix.ui/wallaby/**/*.{ts,cjs}",
+    "../phenix.ui/*.{ts,js,cjs}",
+    "../phenix.yard/src/main/java/**/*.java",
+    "../phenix.yard/src/main/resources/**/*.{sql,yaml,yml,properties,xml}",
+    "../phenix.yard/src/test/java/**/*.java",
+    "../phenix.yard/src/test/resources/**/*.{feature,yaml,yml,json,properties,sql}",
+    "../phenix.yard/test-context/src/**/*.java",
+    "../phenix.appointments/src/main/java/**/*.java",
+    "../phenix.appointments/src/main/resources/**/*.{sql,yaml,yml,properties,xml}",
+    "../phenix.appointments/src/test/java/**/*.java",
+    "../phenix.appointments/src/test/resources/**/*.{yaml,yml,json,properties,sql}"
+  ],
+  "ignore": []
+}

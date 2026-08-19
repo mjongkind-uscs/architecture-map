@@ -1,0 +1,23 @@
+{
+  "name": "uscold-architecture-map",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Isometric architecture map of phenix.ui, phenix.yard and phenix.appointments. Run `pnpm sync` after code moves, `pnpm build` to regenerate architecture.html.",
+  "scripts": {
+    "sync": "node scripts/architecture-sync.mjs",
+    "sync:check": "node scripts/architecture-sync.mjs --check",
+    "typecheck": "tsc --noEmit",
+    "build": "node scripts/build.mjs"
+  },
+  "dependencies": {
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.0",
+    "@types/react-dom": "19.2.0",
+    "esbuild": "0.25.9",
+    "typescript": "5.9.2"
+  }
+}

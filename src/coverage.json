@@ -1,0 +1,138 @@
+{
+  "$scope": "Partition of three sibling repos: phenix.ui (TS monorepo), phenix.yard and phenix.appointments (Spring Boot). Paths are relative to architecture-map/. Dotdirs (.github, .storybook), build files (pom.xml, Dockerfile), docs and generated build output are outside `sources` by design. USCS v1, Keycloak, Azure Service Bus and the other Phenix services are unmeasured outside-world nodes and claim nothing.",
+
+  "ui-shell": {
+    "owns": ["../phenix.ui/apps/shell/**"]
+  },
+  "ui-bff": {
+    "owns": ["../phenix.ui/apps/shell/src/app/ui-bff/**"]
+  },
+  "ui-yard-app": {
+    "owns": ["../phenix.ui/apps/yard/**"]
+  },
+  "ui-appointments-app": {
+    "owns": ["../phenix.ui/apps/appointments/**"]
+  },
+  "ui-transaction-app": {
+    "owns": ["../phenix.ui/apps/transaction-history/**"]
+  },
+  "ui-kit": {
+    "owns": ["../phenix.ui/packages/ui/**", "../phenix.ui/packages/shell-ui/**"]
+  },
+  "ui-form-engine": {
+    "owns": ["../phenix.ui/packages/form-engine/**"]
+  },
+  "ui-session-auth": {
+    "owns": [
+      "../phenix.ui/packages/session/**",
+      "../phenix.ui/packages/auth/**",
+      "../phenix.ui/packages/preferences/**",
+      "../phenix.ui/packages/logging/**",
+      "../phenix.ui/apps/shell/src/proxy.ts"
+    ]
+  },
+  "ui-workshop": {
+    "owns": [
+      "../phenix.ui/scripts/**",
+      "../phenix.ui/generators/**",
+      "../phenix.ui/e2e/**",
+      "../phenix.ui/wallaby/**",
+      "../phenix.ui/*.ts",
+      "../phenix.ui/*.js",
+      "../phenix.ui/*.cjs",
+      "../phenix.ui/packages/eslint-config/**",
+      "../phenix.ui/packages/typescript-config/**",
+      "../phenix.ui/packages/vitest-config/**",
+      "../phenix.ui/packages/storybook-config/**",
+      "../phenix.ui/packages/storybook-check/**",
+      "../phenix.ui/packages/storybook/**"
+    ]
+  },
+
+  "yard-core": {
+    "owns": ["../phenix.yard/src/main/java/com/uscs/phenix/yard/be/**"]
+  },
+  "yard-v2-api": {
+    "owns": [
+      "../phenix.yard/src/main/java/com/uscs/phenix/yard/be/_v2/**",
+      "../phenix.yard/src/main/java/com/uscs/phenix/yard/setup/**",
+      "../phenix.yard/src/main/java/com/uscs/phenix/yard/overlook/**",
+      "../phenix.yard/src/main/java/com/uscs/phenix/yard/trailer/**",
+      "../phenix.yard/src/main/java/com/uscs/phenix/yard/location/**",
+      "../phenix.yard/src/main/java/com/uscs/phenix/yard/occupancy/**",
+      "../phenix.yard/src/main/java/com/uscs/phenix/yard/driver/**",
+      "../phenix.yard/src/main/java/com/uscs/phenix/yard/warehouse/**",
+      "../phenix.yard/src/main/java/com/uscs/phenix/yard/carriers/**",
+      "../phenix.yard/src/main/java/com/uscs/phenix/yard/yardspot/**",
+      "../phenix.yard/src/main/java/com/uscs/phenix/yard/dockdoor/**",
+      "../phenix.yard/src/main/java/com/uscs/phenix/yard/arrival/**",
+      "../phenix.yard/src/main/java/com/uscs/phenix/yard/loadprogress/**",
+      "../phenix.yard/src/main/java/com/uscs/phenix/yard/common/**",
+      "../phenix.yard/src/main/java/com/uscs/phenix/yard/app/**",
+      "../phenix.yard/src/main/java/com/uscs/phenix/yard/config/**",
+      "../phenix.yard/src/main/java/com/uscs/phenix/yard/*.java",
+      "../phenix.yard/src/main/resources/openapi/**"
+    ]
+  },
+  "yard-seams": {
+    "owns": [
+      "../phenix.yard/src/main/java/com/uscs/phenix/yard/appointments/**",
+      "../phenix.yard/src/main/java/com/uscs/phenix/yard/stubs/**"
+    ]
+  },
+  "yard-events": {
+    "owns": ["../phenix.yard/src/main/java/com/uscs/phenix/yard/integration/**"]
+  },
+  "yard-legacy-migration": {
+    "owns": [
+      "../phenix.yard/src/main/java/com/uscs/phenix/yard/legacy/**",
+      "../phenix.yard/src/main/java/com/uscs/phenix/yard/acl/**",
+      "../phenix.yard/src/main/java/com/uscs/phenix/yard/migration/**"
+    ]
+  },
+  "yard-db": {
+    "owns": [
+      "../phenix.yard/src/main/resources/db/**",
+      "../phenix.yard/src/main/resources/*.yaml",
+      "../phenix.yard/src/main/resources/*.yml",
+      "../phenix.yard/src/main/resources/*.properties",
+      "../phenix.yard/src/main/resources/*.xml"
+    ]
+  },
+  "yard-tests": {
+    "owns": ["../phenix.yard/src/test/**", "../phenix.yard/test-context/**"]
+  },
+
+  "appt-api": {
+    "owns": [
+      "../phenix.appointments/src/main/java/com/uscs/phenix/appointments/maintenance/**",
+      "../phenix.appointments/src/main/java/com/uscs/phenix/appointments/search/**",
+      "../phenix.appointments/src/main/java/com/uscs/phenix/appointments/loadprogress/**",
+      "../phenix.appointments/src/main/java/com/uscs/phenix/appointments/app/**",
+      "../phenix.appointments/src/main/java/com/uscs/phenix/appointments/shared/**",
+      "../phenix.appointments/src/main/java/com/uscs/phenix/appointments/*.java",
+      "../phenix.appointments/src/main/resources/openapi/**"
+    ]
+  },
+  "appt-events": {
+    "owns": ["../phenix.appointments/src/main/java/com/uscs/phenix/appointments/messaging/**"]
+  },
+  "appt-migration-acl": {
+    "owns": [
+      "../phenix.appointments/src/main/java/com/uscs/phenix/appointments/migration/**",
+      "../phenix.appointments/src/main/java/com/uscs/phenix/appointments/acl/**"
+    ]
+  },
+  "appt-db": {
+    "owns": [
+      "../phenix.appointments/src/main/resources/db/**",
+      "../phenix.appointments/src/main/resources/*.yaml",
+      "../phenix.appointments/src/main/resources/*.yml",
+      "../phenix.appointments/src/main/resources/*.properties",
+      "../phenix.appointments/src/main/resources/*.xml"
+    ]
+  },
+  "appt-tests": {
+    "owns": ["../phenix.appointments/src/test/**"]
+  }
+}
